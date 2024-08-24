@@ -36,7 +36,7 @@ const Learning = () => {
       alert(error);
       dispatch(clearState());
     }
-  }, []);
+  }, [dispatch, params, error]);
 
   console.log(words);
 
@@ -87,7 +87,7 @@ const Learning = () => {
           count === words.length - 1 ? () => navigate("/quiz") : nexthandler
         }
       >
-        {count === 7 ? "Test" : "Next"}
+        {count === words.length - 1 ? "Test" : "Next"}
       </Button>
     </Container>
   );
