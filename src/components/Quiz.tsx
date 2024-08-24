@@ -32,7 +32,7 @@ const Quiz = () => {
   useEffect(() => {
     if (count + 1 > words.length) navigate("/result");
     dispatch(saveResult(result));
-  }, [result, dispatch]);
+  }, [result, dispatch, count, words.length, navigate]);
 
   return (
     <Container
