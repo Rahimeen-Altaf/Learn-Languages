@@ -14,3 +14,9 @@ interface StateType {
   result: string[];
   error?: string;
 }
+
+type FetchedDataType = {
+  translations: {
+    text: string;
+  }[];
+};
